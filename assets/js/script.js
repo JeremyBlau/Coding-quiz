@@ -68,3 +68,17 @@ function showQuestion() {
     choicesContainer.appendChild(choiceBtn);
   });
 }
+// How to handel user's choice
+function handleChoice(event) 
+  if (!event.target.matches(".choice-btn")) return;
+
+  const selectedAnswerIndex = parseInt(event.target.getAttribute("data-index"));
+  const question = questions[currentQuestionIndex];
+
+  if (selectedAnswerIndex === question.answer) {
+    // Correct answer
+    // TODO: Handle correct answer logic
+  } else {
+    // Incorrect answer
+    // TODO: Handle incorrect answer logic
+  }
