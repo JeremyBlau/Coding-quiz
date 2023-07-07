@@ -90,3 +90,18 @@ function handleChoice(event)
     showQuestion();
   }
 
+// End the quiz
+function endQuiz() {
+  clearInterval(timerId);
+  document.getElementById("quiz-screen").classList.add("hide");
+  endScreen.classList.remove("hide");
+  finalScoreText.textContent = timeLeft;
+}
+
+// Save the score
+function saveScore(event) {
+  event.preventDefault();
+  const initials = initialsInput.value.trim();
+  // TODO: Save initials and score to storage or send to server
+  initialsInput.value = "";
+}
