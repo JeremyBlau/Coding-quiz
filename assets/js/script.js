@@ -51,6 +51,7 @@ const questions = [
 let currentQuestionIndex = 0;
 let timeLeft = 60;
 let timerId;
+let score = 0;
 
 // DOM elements
 const startBtn = document.getElementById("start-btn");
@@ -108,10 +109,10 @@ function handleChoice(event) {
 
   if (selectedAnswerIndex === question.answer) {
     // Correct answer
-    // TODO: Handle correct answer logic
+    // Increment the score by 1
   } else {
     // Incorrect answer
-    // TODO: Handle incorrect answer logic
+    // Do nothing
   }
 
   currentQuestionIndex++;
