@@ -22,7 +22,7 @@ let currentQuestionIndex = 0;
 let timeLeft = 60;
 let timerId;
 
-// Document Object Model elements
+// DOM elements
 const startBtn = document.getElementById("start-btn");
 const questionText = document.getElementById("question-text");
 const choicesContainer = document.getElementById("choices");
@@ -68,8 +68,9 @@ function showQuestion() {
     choicesContainer.appendChild(choiceBtn);
   });
 }
-// How to handel user's choice
-function handleChoice(event) 
+
+// Handle user's choice
+function handleChoice(event) {
   if (!event.target.matches(".choice-btn")) return;
 
   const selectedAnswerIndex = parseInt(event.target.getAttribute("data-index"));
@@ -89,6 +90,7 @@ function handleChoice(event)
   } else {
     showQuestion();
   }
+}
 
 // End the quiz
 function endQuiz() {
