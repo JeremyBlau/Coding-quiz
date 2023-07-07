@@ -82,3 +82,11 @@ function handleChoice(event)
     // Incorrect answer
     // TODO: Handle incorrect answer logic
   }
+
+  currentQuestionIndex++;
+  if (currentQuestionIndex >= questions.length) {
+    endQuiz();
+  } else {
+    showQuestion();
+  }
+
