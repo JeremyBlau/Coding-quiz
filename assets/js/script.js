@@ -14,32 +14,32 @@ const questions = [
     question: "What is the powerhouse of the cell?",
     choices: ["Mitochondria", "Nucleus", "Ribosome", "Golgi Apparatus"],
     answer: 0
-  }
+  },
   {
     question: "What does CSS stand for?",
     choices: ["Cascading Style Sheets", "Computer Science Syntax", "Creative Styling System", "Coding Style Standards"],
     answer: 0
-  }
+  },
   {
     question: "Which HTML tag is used to define an unordered list?",
     choices: ["<ul>", "<ol>", "<li>", "<div>"],
     answer: 0
-  }
+  },
   {
     question: "Which programming language is primarily used for client-side scripting in web development?",
     choices: ["JavaScript", "Python", "Java", "C++"],
     answer: 0
-  }
+  },
   {
     question: "What does the acronym 'HTTP' stand for?",
     choices: ["HyperText Transfer Protocol", "Hypertext Type Protocol", "High Traffic Transmission Protocol", "Hyperlink Text Technique"],
     answer: 0
-  }
+  },
   {
     question: "Which CSS property is used to change the text color of an element?",
     choices: ["color", "background-color", "font-size", "padding"],
     answer: 0
-  }
+  },
   {
     question: "What is the purpose of the HTML <img> tag?",
     choices: ["To define a hyperlink", "To display an image", "To create a table", "To define a form"],
