@@ -43,3 +43,13 @@ function startQuiz() {
   startTimer();
   showQuestion();
 }
+
+// Start the timer
+function startTimer() {
+  timerId = setInterval(() => {
+    timeLeft--;
+    if (timeLeft <= 0) {
+      endQuiz();
+    }
+  }, 1000);
+}
