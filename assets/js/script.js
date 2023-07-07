@@ -53,3 +53,18 @@ function startTimer() {
     }
   }, 1000);
 }
+
+// Show a question
+function showQuestion() {
+  const question = questions[currentQuestionIndex];
+  questionText.textContent = question.question;
+
+  choicesContainer.innerHTML = "";
+  question.choices.forEach((choice, index) => {
+    const choiceBtn = document.createElement("button");
+    choiceBtn.classList.add("choice-btn");
+    choiceBtn.textContent = choice;
+    choiceBtn.setAttribute("data-index", index);
+    choicesContainer.appendChild(choiceBtn);
+  });
+}
