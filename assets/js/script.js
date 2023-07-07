@@ -16,3 +16,17 @@ const questions = [
     answer: 0
   }
 ];
+
+// Global variables
+let currentQuestionIndex = 0;
+let timeLeft = 60;
+let timerId;
+
+// Document Object Model elements
+const startBtn = document.getElementById("start-btn");
+const questionText = document.getElementById("question-text");
+const choicesContainer = document.getElementById("choices");
+const endScreen = document.getElementById("end-screen");
+const finalScoreText = document.getElementById("final-score");
+const initialsForm = document.getElementById("initials-form");
+const initialsInput = document.getElementById("initials");
