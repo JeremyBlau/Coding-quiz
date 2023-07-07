@@ -30,3 +30,8 @@ const endScreen = document.getElementById("end-screen");
 const finalScoreText = document.getElementById("final-score");
 const initialsForm = document.getElementById("initials-form");
 const initialsInput = document.getElementById("initials");
+
+// Event listeners
+startBtn.addEventListener("click", startQuiz);
+choicesContainer.addEventListener("click", handleChoice);
+initialsForm.addEventListener("submit", saveScore);
