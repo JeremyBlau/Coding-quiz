@@ -66,6 +66,7 @@ const initialsInput = document.getElementById("initials");
 startBtn.addEventListener("click", startQuiz);
 choicesContainer.addEventListener("click", handleChoice);
 initialsForm.addEventListener("submit", saveScore);
+const timerElement = document.getElementById("timer"); // Added timer element
 
 // Start the quiz
 function startQuiz() {
@@ -128,7 +129,7 @@ function endQuiz() {
   clearInterval(timerId);
   document.getElementById("quiz-screen").classList.add("hide");
   endScreen.classList.remove("hide");
-  finalScoreText.textContent = timeLeft;
+  finalScoreText.textContent = score;
 }
 
 // Save the score
