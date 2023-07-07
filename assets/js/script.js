@@ -49,6 +49,7 @@ const initialsInput = document.getElementById("initials");
 const timerElement = document.getElementById("timer"); // Added timer element
 
 
+
 // Event listeners
 startBtn.addEventListener("click", startQuiz);
 choicesContainer.addEventListener("click", handleChoice);
@@ -122,8 +123,54 @@ function endQuiz() {
 function saveScore(event) {
   event.preventDefault();
   const initials = initialsInput.value.trim();
-  // TODO: Save initials and score to storage or send to server
+  const scoreData = { initials, score };
+  
+  // Retrieve existing scores from local storage
+  const scores = JSON.parse(localStorage.getItem("scores")) || [];
+  
+  // Add the current score to the list
+  scores.push(scoreData);
+  
+  // Save the updated scores to local storage
+  localStorage.setItem("scores", JSON.stringify(scores));
+
+  // Clear the initials input
   initialsInput.value = "";
 
-  finalScoreText.textContent = score;
+  showScoresTable();
+}
+function showScoresTable() {
+  const scores = JSON.parse(localStorage.getItem("scores")) || [];
+
+  // Show the scores screen and hide other screens
+  document.getElementById("start-screen").classList.add("hide");
+  document.getElementById("quiz-screen").classList.add("hide");
+  document.getElementById("end-screen").classList.add("hide");
+  document.getElementById("scores-screen").classList.remove("hide");
+
+  // Clear the existing scores table
+  const scoresTable = document.getElementById("scores-table");
+  scoresTable.innerHTML = "";
+
+  // Create and append table header
+  const headerRow = document.createElement("tr");
+  const initialsHeader = document.createElement("th");
+  initialsHeader.textContent = "Initials";
+  const scoreHeader = document.createElement("th");
+  scoreHeader.textContent = "Score";
+  headerRow.appendChild(initialsHeader);
+  headerRow.appendChild(scoreHeader);
+  scoresTable.appendChild(headerRow);
+
+  // Create and append table rows
+  scores.forEach(scoreData => {
+    const row = document.createElement("tr");
+    const initialsCell = document.createElement("td");
+    initialsCell.textContent = scoreData.initials;
+    const scoreCell = document.createElement("td");
+    scoreCell.textContent = scoreData.score;
+    row.appendChild(initialsCell);
+    row.appendChild(scoreCell);
+    scoresTable.appendChild(row);
+  });
 }
