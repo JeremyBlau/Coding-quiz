@@ -12,13 +12,28 @@
   
   <main>
     <section id="start-screen">
+      <h2>Test your JavaScript knowledge!</h2>
+      <button id="start-btn">Start Quiz</button>
     </section>
     
     <section id="quiz-screen" class="hide">
+      <h2>Question</h2>
+      <p id="question-text"></p>
+      <div id="choices">
+        <button class="choice-btn"></button>
+        <button class="choice-btn"></button>
+        <button class="choice-btn"></button>
+        <button class="choice-btn"></button>
       </div>
     </section>
     
     <section id="end-screen" class="hide">
+      <h2>Quiz Complete!</h2>
+      <p>Your final score is: <span id="final-score"></span></p>
+      <form id="initials-form">
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" maxlength="3" required>
+        <button type="submit">Save</button>
       </form>
     </section>
   </main>
