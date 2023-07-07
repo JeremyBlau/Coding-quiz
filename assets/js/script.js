@@ -109,7 +109,7 @@ function handleChoice(event) {
 
   if (selectedAnswerIndex === question.answer) {
     // Correct answer
-    // Increment the score by 1
+    score++;
   } else {
     // Incorrect answer
     // Do nothing
@@ -137,4 +137,6 @@ function saveScore(event) {
   const initials = initialsInput.value.trim();
   // TODO: Save initials and score to storage or send to server
   initialsInput.value = "";
+
+  finalScoreText.textContent = score;
 }
