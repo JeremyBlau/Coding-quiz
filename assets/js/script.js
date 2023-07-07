@@ -35,3 +35,11 @@ const initialsInput = document.getElementById("initials");
 startBtn.addEventListener("click", startQuiz);
 choicesContainer.addEventListener("click", handleChoice);
 initialsForm.addEventListener("submit", saveScore);
+
+// Start the quiz
+function startQuiz() {
+  document.getElementById("start-screen").classList.add("hide");
+  document.getElementById("quiz-screen").classList.remove("hide");
+  startTimer();
+  showQuestion();
+}
