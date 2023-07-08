@@ -40,19 +40,27 @@ let score = 0;
 
 // DOM elements
 const startBtn = document.getElementById("start-btn");
+const continueBtn = document.getElementById("continue-btn");
+const infoBox = document.querySelector(".info-box"); // Added info box element
 const questionText = document.getElementById("question-text");
 const choicesContainer = document.getElementById("choices");
 const endScreen = document.getElementById("end-screen");
 const finalScoreText = document.getElementById("final-score");
 const initialsForm = document.getElementById("initials-form");
 const initialsInput = document.getElementById("initials");
-const timerElement = document.getElementById("timer"); // Added timer element
+const timerElement = document.getElementById("timer");
+
 
 // Event listeners
 startBtn.addEventListener("click", startQuiz);
+continueBtn.addEventListener("click", hideInfoBox); // Added event listener for continue button
 choicesContainer.addEventListener("click", handleChoice);
 initialsForm.addEventListener("submit", saveScore);
 
+// Hide the info box
+function hideInfoBox() {
+  infoBox.classList.add("hide");
+}
 // Start the quiz
 function startQuiz() {
   document.getElementById("start-screen").classList.add("hide");
@@ -60,7 +68,6 @@ function startQuiz() {
   startTimer();
   showQuestion();
 }
-
 // Start the timer
 function startTimer() {
   timerId = setInterval(() => {
