@@ -22,15 +22,28 @@ body {
 
 .info-box{
   position:absolute;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size:25;
+  font-size: 20;
   color:firebrick;
   padding: 15px 30px;
   outline: none;
   border-radius: 5px;
   background: white;
+}
+#continue-btn{
+  position: absolute;
+  top: 90%;
+  right: 10px; /* Adjust this value to your desired spacing */
+  transform: translateY(-50%);
+  font-size:10;
+  color:white;
+  padding: 5px 5px;
+  outline: none;
+  border-radius: 5px;
+  background: firebrick;
+  cursor: pointer;
 }
 
 header {

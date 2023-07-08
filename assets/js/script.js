@@ -48,8 +48,6 @@ const initialsForm = document.getElementById("initials-form");
 const initialsInput = document.getElementById("initials");
 const timerElement = document.getElementById("timer"); // Added timer element
 
-
-
 // Event listeners
 startBtn.addEventListener("click", startQuiz);
 choicesContainer.addEventListener("click", handleChoice);
