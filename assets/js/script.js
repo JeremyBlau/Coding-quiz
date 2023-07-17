@@ -75,6 +75,7 @@ function startTimer() {
     if (timeLeft <= 0) {
       endQuiz();
     }
+    timerElement.textContent = timeLeft;
   }, 1000);
 }
 
