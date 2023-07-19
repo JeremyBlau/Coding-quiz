@@ -6,7 +6,7 @@ Screenshots
 ![image](https://github.com/JeremyBlau/Coding-quiz/assets/134236414/403cb5d6-ec64-4636-84c0-217391e9076d)
 
 ## Deployment
-The application is deployed and can be accessed through the following link: [Deployed Application]((https://jeremyblau.github.io/Coding-quiz/)/)
+The application is deployed and can be accessed through the following link: [Deployed Application](https://jeremyblau.github.io/Coding-quiz/)
 
 ## Installation
 To install and run this project locally, follow these steps:
