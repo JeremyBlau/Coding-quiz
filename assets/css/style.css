@@ -6,20 +6,32 @@ body {
   background-color: rgb(223, 221, 218);
 }
 
-
-#start-btn{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size:25;
-    color:white;
-    padding: 15px 30px;
-    outline: none;
-    border-radius: 5px;
-    background: firebrick;
-    cursor: pointer;
+#start-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: white;
+  padding: 15px 30px;
+  outline: none;
+  border-radius: 5px;
+  background: firebrick;
+  cursor: pointer;
 }
+
+#show-scores-btn {top: 90%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: white;
+  padding: 5px 5px;
+  outline: none;
+  border-radius: 5px;
+  background: firebrick;
+  cursor: pointer;
+}
+
 #timer {
   position: absolute;
   top: 20px;
@@ -29,25 +41,27 @@ body {
   border-radius: 5px;
   font-size: 18px;
 }
-.info-box{
-  position:absolute;
+
+.info-box {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20;
-  color:firebrick;
+  font-size: 20px; 
+  color: firebrick;
   padding: 15px 30px;
   outline: none;
   border-radius: 5px;
   background: white;
 }
-#continue-btn{
+
+#continue-btn {
   position: absolute;
   top: 90%;
-  right: 10px; /* Adjust this value to your desired spacing */
+  right: 10px;
   transform: translateY(-50%);
-  font-size:10;
-  color:white;
+  font-size: 12px;
+  color: white;
   padding: 5px 5px;
   outline: none;
   border-radius: 5px;
@@ -56,7 +70,7 @@ body {
 }
 
 #continue-btn:hover {
-  background: darkred; /* Change the background color on hover */
+  background: darkred;
 }
 
 header {
@@ -68,9 +82,10 @@ header {
 main {
   padding: 20px;
 }
-.choice-btn{
-  font-size:20;
-  color:white;
+
+.choice-btn {
+  font-size: 20px;
+  color: white;
   padding: 1px 10px;
   outline: none;
   border-radius: 5px;

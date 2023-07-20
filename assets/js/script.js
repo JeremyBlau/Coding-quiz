@@ -41,7 +41,7 @@ let score = 0;
 // DOM elements
 const startBtn = document.getElementById("start-btn");
 const continueBtn = document.getElementById("continue-btn");
-const infoBox = document.querySelector(".info-box"); // Added info box element
+const infoBox = document.querySelector(".info-box");
 const questionText = document.getElementById("question-text");
 const choicesContainer = document.getElementById("choices");
 const endScreen = document.getElementById("end-screen");
@@ -49,22 +49,31 @@ const finalScoreText = document.getElementById("final-score");
 const initialsForm = document.getElementById("initials-form");
 const initialsInput = document.getElementById("initials");
 const timerElement = document.getElementById("timer");
+const showScoresBtn = document.getElementById("show-scores-btn");
+showScoresBtn.addEventListener("click", () => {
+  showScoresTable();
+});
 
+// Hide the Start button initially
+startBtn.style.display = "none";
 
 // Event listeners
+continueBtn.addEventListener("click", hideInfoBoxAndShowStart);
 startBtn.addEventListener("click", startQuiz);
-continueBtn.addEventListener("click", hideInfoBox); // Added event listener for continue button
 choicesContainer.addEventListener("click", handleChoice);
 initialsForm.addEventListener("submit", saveScore);
 
-// Hide the info box
-function hideInfoBox() {
+// Hide the info box and show the Start button
+function hideInfoBoxAndShowStart() {
   infoBox.classList.add("hide");
+  startBtn.style.display = "block";
 }
+
 // Start the quiz
 function startQuiz() {
   document.getElementById("start-screen").classList.add("hide");
   document.getElementById("quiz-screen").classList.remove("hide");
+  startBtn.style.display = "none"; // Hide the Start button
   startTimer();
   showQuestion();
 }
