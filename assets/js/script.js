@@ -71,6 +71,9 @@ function hideInfoBoxAndShowStart() {
 
 // Start the quiz
 function startQuiz() {
+  // Hide the scores screen if it's visible
+  document.getElementById("scores-screen").classList.add("hide");
+  
   document.getElementById("start-screen").classList.add("hide");
   document.getElementById("quiz-screen").classList.remove("hide");
   startBtn.style.display = "none"; // Hide the Start button
