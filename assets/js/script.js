@@ -118,7 +118,10 @@ function handleChoice(event) {
     score++;
   } else {
     // Incorrect answer
-    // Do nothing
+    timeLeft -= 5; // Decrease the timer by 5 seconds
+    if (timeLeft < 0) {
+      timeLeft = 0; // Ensure the timer doesn't go below 0
+    }
   }
 
   currentQuestionIndex++;
